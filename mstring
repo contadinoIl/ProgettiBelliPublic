@@ -1,0 +1,48 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+namespace mstring {
+    class stringa {
+    public:
+        static string lowerstring(const string& stringaNormale) {
+            string lowercasata;
+            for (char figoSS : stringaNormale) {
+                lowercasata += tolower(figoSS);
+            }
+            return lowercasata;
+        }
+
+        static string upperstring(const string& stringaNormale) {
+            string uppercasata;
+            for (char figoSS : stringaNormale) {
+                uppercasata += toupper(figoSS);
+            }
+            return uppercasata;
+        }
+        static string removespace(const string& stringaNormale) {
+            string datoRemouveSpace;
+            for (char figoSS : stringaNormale) {
+                
+                if(figoSS != ' ') {
+
+                datoRemouveSpace += figoSS;
+                }
+
+            }
+            return datoRemouveSpace;
+        }
+    };
+
+    // Funzione di aiuto
+     string lowerstring(const string& stringaNormale) {
+        return stringa::lowerstring(stringaNormale);
+    }
+    string upperstring(const string& stringaNormale) {
+        return stringa::upperstring(stringaNormale);
+    }
+    string removespace(const string& stringaNormale) {
+        return stringa::removespace(stringaNormale);
+    }
+}
